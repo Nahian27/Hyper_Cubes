@@ -464,7 +464,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: ../../FMOD Studio/Hyper Cubes/Build/Mobile
+  sourceBankPath: ../../../FMOD Studio/Hyper Cubes/Build/Mobile
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
