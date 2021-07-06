@@ -16,7 +16,8 @@ public class CubeSpawner : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(Cube, new Vector3(Random.Range(-3, 3), 10, 0), Quaternion.identity);
+            Vector3 ScreenToWorld = Camera.main.ScreenToWorldPoint(transform.position);
+            Instantiate(Cube, new Vector3(Random.Range(-ScreenToWorld.x, ScreenToWorld.x), 10, 0), Quaternion.identity);
             yield return new WaitForSeconds(Delay);
         }
     }

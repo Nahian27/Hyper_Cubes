@@ -15,12 +15,12 @@ public class Paused_Script : MonoBehaviour
 
     public void resume()
     {
-        gameObject.SetActive(false);
         PauseCanasGroup.LeanAlpha(0, 0.5f).setOnComplete(TimeResume).setIgnoreTimeScale(true);
     }
 
     void TimeResume()
     {
+        gameObject.SetActive(false);
         timer.StartCoroutine("Timer");
         Time.timeScale = 1f;
     }
