@@ -1109,3 +1109,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed5a0f7b5ed721449d9408795c7300e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSFX: event:/Buttons

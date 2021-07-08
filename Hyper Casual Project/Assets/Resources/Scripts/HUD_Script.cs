@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using TMPro;
 
@@ -10,13 +10,14 @@ public class HUD_Script : MonoBehaviour
     private float scorePerSec;
     public GameOver_Script FinalScore;
     public GameObject PauseScreen;
-
+    [FMODUnity.EventRef]
+    public string buttonSFX;
 
     void Start()
     {
         score = 0;
         scorePerSec = 1f;
-        StartCoroutine("Timer");
+        StartCoroutine(Timer());
     }
 
     void OnGUI()
@@ -29,6 +30,7 @@ public class HUD_Script : MonoBehaviour
     {
         PauseScreen.SetActive(true);
         Time.timeScale = 0f;
+        FMODUnity.RuntimeManager.PlayOneShot(buttonSFX);
     }
 
     public IEnumerator Timer()

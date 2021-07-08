@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using TMPro;
 
 
@@ -11,6 +8,10 @@ public class GameOver_Script : MonoBehaviour
     public TextMeshProUGUI scoreText, highScoreText;
     public CanvasGroup GameOverGroup;
     public float Delay;
+    [FMODUnity.EventRef]
+    public string buttonSFX;
+    [FMODUnity.EventRef]
+    public string button2SFX;
 
     void OnEnable()
     {
@@ -31,10 +32,12 @@ public class GameOver_Script : MonoBehaviour
     public void retry()
     {
         SceneManager.LoadScene(1);
+        FMODUnity.RuntimeManager.PlayOneShot(buttonSFX);
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+        FMODUnity.RuntimeManager.PlayOneShot(button2SFX);
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +5,8 @@ public class Paused_Script : MonoBehaviour
 {
     public HUD_Script timer;
     public CanvasGroup PauseCanasGroup;
+    [FMODUnity.EventRef]
+    public string buttonSFX;
 
     void OnEnable()
     {
@@ -16,6 +16,7 @@ public class Paused_Script : MonoBehaviour
     public void resume()
     {
         PauseCanasGroup.LeanAlpha(0, 0.5f).setOnComplete(TimeResume).setIgnoreTimeScale(true);
+        FMODUnity.RuntimeManager.PlayOneShot(buttonSFX);
     }
 
     void TimeResume()
@@ -27,6 +28,7 @@ public class Paused_Script : MonoBehaviour
 
     public void MainMenu()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(buttonSFX);
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
     }
