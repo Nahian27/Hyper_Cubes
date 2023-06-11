@@ -3,7 +3,7 @@ using UnityEngine;
 public class Sphere : MonoBehaviour
 {
     public float Speed;
-    private bool moveLeft, moveRight;
+    private bool moveLeft, moveRight, _moveLeft, _moveRight;
     public GameObject HUD, GameOverMenu, ParticleEffect;
     public Camera MainCamera;
     private Vector2 screenBounds;
@@ -35,13 +35,21 @@ public class Sphere : MonoBehaviour
         moveRight = false;
     }
 
+    void Update()
+    {
+        _moveLeft = moveLeft || Input.GetKey(KeyCode.LeftArrow);
+        _moveRight = moveRight || Input.GetKey(KeyCode.RightArrow);
+    }
+
     void FixedUpdate()
     {
-        if (moveLeft == true || Input.GetKey(KeyCode.LeftArrow))
+        if (_moveLeft)
             transform.position += new Vector3(-Speed, 0, 0);
-        if (moveRight == true || Input.GetKey(KeyCode.RightArrow))
+        if (_moveRight)
             transform.position += new Vector3(Speed, 0, 0);
+
     }
+
     private void LateUpdate()
     {
         Vector3 viewPos = transform.position;

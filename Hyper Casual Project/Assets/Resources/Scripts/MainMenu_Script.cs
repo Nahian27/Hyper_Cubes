@@ -1,6 +1,6 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using FMODUnity;
 
 
 public class MainMenu_Script : MonoBehaviour
@@ -8,6 +8,11 @@ public class MainMenu_Script : MonoBehaviour
     [EventRef]
     public string buttonSFX;
 
+
+    public void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
     public void play()
     {
         SceneManager.LoadScene(1);

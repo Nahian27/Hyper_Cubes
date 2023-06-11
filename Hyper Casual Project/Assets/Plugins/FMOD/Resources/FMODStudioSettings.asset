@@ -208,7 +208,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: ../../../FMOD Studio/Hyper Cubes/Build/Mobile
+  sourceBankPath: Assets/StreamingAssets
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -244,17 +244,17 @@ MonoBehaviour:
   SharedLibraryTimeSinceStart: 0
   HideSetupWizard: 1
   Platforms:
-  - {fileID: -2594504254320086024}
-  - {fileID: 7531157501955745389}
-  - {fileID: -4154035305368946752}
-  - {fileID: 5764699424736205712}
-  - {fileID: 9100171649420157309}
-  - {fileID: 7442728316907102448}
   - {fileID: -6913939146976246454}
-  - {fileID: 6366744085025359534}
+  - {fileID: -4154035305368946752}
+  - {fileID: -2594504254320086024}
+  - {fileID: 1594535286289032639}
   - {fileID: 1668722101421126223}
   - {fileID: 5400513139491159386}
-  - {fileID: 1594535286289032639}
+  - {fileID: 5764699424736205712}
+  - {fileID: 6366744085025359534}
+  - {fileID: 7442728316907102448}
+  - {fileID: 7531157501955745389}
+  - {fileID: 9100171649420157309}
   MigratedPlatforms: 0c000000150000000b0000000a00000009000000120000000800000005000000060000000200000001000000
 --- !u!114 &1594535286289032639
 MonoBehaviour:
@@ -700,15 +700,15 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   childIdentifiers:
-  - c88d16e5272a4e241b0ef0ac2e53b73d
-  - fd7c55dab0fce234b8c25f6ffca523c1
-  - 2c5177b11d81d824dbb064f9ac8527da
-  - e7a046c753c3c3d4aacc91f6597f310d
   - 52eb9df5db46521439908db3a29a1bbb
-  - b7716510a1f36934c87976f3a81dbf3d
+  - c88d16e5272a4e241b0ef0ac2e53b73d
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
   - 0f8eb3f400726694eb47beb1a9f94ce8
   - 46fbfdf3fc43db0458918377fd40293e
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - fd7c55dab0fce234b8c25f6ffca523c1
+  - b7716510a1f36934c87976f3a81dbf3d
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - 2c5177b11d81d824dbb064f9ac8527da
   outputType: 
   threadAffinities:
     Value: []
